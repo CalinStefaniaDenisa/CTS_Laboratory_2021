@@ -1,5 +1,7 @@
 CODE REVIEW
 
+PHASE 1
+
 1. Code structure and naming conventions
 	- rename Class1
 	- rename Calculeaza and use lowercase
@@ -11,3 +13,10 @@ CODE REVIEW
 	- remove the hardcoded values ("magic numbers")
 	- is t limited to {1, 2, 3, 4} or it can be bigger?
 	- add validations fot input values
+
+
+PHASE 2 
+
+3. KISS & Singe Responsability
+	- simplify the expressions
+	- a function should do a single thing
