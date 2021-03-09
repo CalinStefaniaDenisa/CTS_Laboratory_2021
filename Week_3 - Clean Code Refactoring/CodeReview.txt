@@ -1,0 +1,12 @@
+CODE REVIEW
+
+1. Code structure and naming conventions
+	- rename Class1
+	- rename Calculeaza and use lowercase
+	- rename t, s, perioada - t and s must have meaningful names
+	- rename rezultat
+	- rename valoare
+
+2. Implementation
+	- remove the hardcoded values ("magic numbers")
+	- is t limited to {1, 2, 3, 4} or it can be bigger?
