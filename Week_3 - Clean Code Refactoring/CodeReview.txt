@@ -10,3 +10,4 @@ CODE REVIEW
 2. Implementation
 	- remove the hardcoded values ("magic numbers")
 	- is t limited to {1, 2, 3, 4} or it can be bigger?
+	- add validations fot input values
