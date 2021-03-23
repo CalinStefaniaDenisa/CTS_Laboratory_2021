@@ -6,7 +6,7 @@ public class DbConnection {
 	String schema; // database name
 	
 	// NO public constructor for Singleton
-	// static attribute! global reference to the unique object
+	// static attribute! reference to the unique object
 	private static DbConnection connection = null;
 
 	// default constructor
@@ -24,6 +24,7 @@ public class DbConnection {
 		this.schema = schema;
 	}
 	
+	// lazy instantiation of the unique object - don't create the object until someone needs them
 	// global function
 	public static DbConnection getConnection() {
 		// executed only once

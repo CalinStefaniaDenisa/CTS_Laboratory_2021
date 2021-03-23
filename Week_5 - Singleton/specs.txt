@@ -10,3 +10,7 @@ Keywords:
 unique connection
 cannot build multiple objects
 a unique object
+
+
+2. The app will use different databases for development and production.
+The connections to those dbs must be unique without the overhead of creating multiple singleton classes.
