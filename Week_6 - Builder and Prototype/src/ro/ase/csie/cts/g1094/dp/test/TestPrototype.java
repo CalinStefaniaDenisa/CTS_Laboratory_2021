@@ -1,4 +1,6 @@
-package ro.ase.csie.cts.g1094.dp.prototype;
+package ro.ase.csie.cts.g1094.dp.test;
+
+import ro.ase.csie.cts.g1094.dp.prototype.Tree3DModel;
 
 public class TestPrototype {
 
