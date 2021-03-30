@@ -3,6 +3,7 @@ package ro.ase.csie.cts.g1094.dp.test;
 import ro.ase.csie.cts.g1094.dp.builder.Pistol;
 import ro.ase.csie.cts.g1094.dp.builder.Superhero;
 import ro.ase.csie.cts.g1094.dp.builder.Superhero.SuperheroBuilder;
+import ro.ase.csie.cts.g1094.dp.builder.SuperherosCatalogue;
 
 public class TestBuilder {
 
@@ -37,6 +38,10 @@ public class TestBuilder {
 				.addLeftWeapon(new Pistol())
 				.addRightWeapon(new Pistol())
 				.build();
+		
+		// with preset configuration
+		SuperherosCatalogue catalogue = new SuperherosCatalogue(new SuperheroBuilder("Joker", 200));
+		Superhero joker2 = catalogue.buildJoker();
 	}
 
 }
