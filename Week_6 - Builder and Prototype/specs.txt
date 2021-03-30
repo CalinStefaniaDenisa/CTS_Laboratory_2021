@@ -11,7 +11,15 @@ Keywords for builder:
 
 
 
-2. All characters have a 3D graphic model
+2. All characters have a 3D graphic model - for trees
 - instances of the same character can appear in the game
 - creating the 3D model is an expensive process because it involves loading and generating the model
 - an efficient solution must be found to create several instances of the same character
+
+Keywords for prototype:
+	- multiple objects with the same data
+	- creating - creational category
+	- expensive process - processor time, memory, etc
+	- efficient solution to create several instances of the same object
+	- basically prototype is a glorified copy constructor
+	
