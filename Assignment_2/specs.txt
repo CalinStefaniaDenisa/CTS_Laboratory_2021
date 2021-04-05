@@ -1,0 +1,22 @@
+Assignment 2 - Code Review & Refactoring
+
+
+Analyze the attached class (Account.java) based on Clean Code concepts presented during the course/laboratory and
+
+	- do a code review (in a text file) and indicate which are the problems and how it would be more correct to implement the methods and the class. Each problem must be classified based on the categories from the dzone article (see the link below)
+	- perform a refactoring of the solution (can be defined other classes + interfaces ) according to the recommended code review
+
+The received class contains at least 20 problems.
+
+The recommendations in the following documents can also be used for code reviews
+
+	- https://www.evoketechnologies.com/blog/code-review-checklist-perform-effective-code-reviews/
+
+	- https://dzone.com/articles/java-code-review-checklist
+
+
+
+To send the solution, you need to upload:
+
+	- the .txt file containing the code review;
+	- one or more .java files containing the solution redone according to the observations and recommendations from the code review;
