@@ -3,10 +3,24 @@ Simple Factory
 	1. Create different weapon types in the game
 		- currently there are 3 types of weapons PISTOL, MACHINE_GUN and ROCKET
 		- there is a risk that in the future new types will appear or the existing ones will change
-	
+
 	keywords:
 		- create -> creational pattern
 		- different weapon types -> objects from a framework
 		- risk is 100% 
 		- new types will appear/existing ones will change -> code should be independent of those changes, no need to rewrite the entire class.
 		- tight coupling transforms in loose coupling.
+
+
+
+Prototype
+
+	2. In order to allow other companies or players to develop external solutions that connect to the game, a library (an API) must be developed.
+		- The API contains many classes with many details
+		- not all classes are documented
+		- The API should provide a simplified interface for a set of basic functions
+	
+	Keywords:
+		- a library
+		- The API contains many classes with many details
+		- a simplified interface for a set of basic functions
