@@ -6,7 +6,7 @@ import ro.ase.csie.cts.g1094.dp.simplefactory.WeaponType;
 public class WaterWeaponsFactory extends AbstractFactory {
 
 	@Override
-	public AbstractFactory getWeapon(WeaponType type, String description) {
+	public AbstractWeapon getWeapon(WeaponType type, String description) {
 		
 		AbstractWeapon weapon = null;
 		switch(type) {
@@ -14,7 +14,7 @@ public class WaterWeaponsFactory extends AbstractFactory {
 			weapon = new WaterPistol();
 			break;
 		case MACHINE_GUN:
-			weapon = new WaterBaloon();
+			weapon = new WaterBalloon();
 			break;
 		case BAZOOKA:
 			weapon = new WaterBucket();

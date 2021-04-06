@@ -2,7 +2,7 @@ package ro.ase.csie.cts.g1094.dp.factory;
 
 import ro.ase.csie.cts.g1094.dp.simplefactory.AbstractWeapon;
 
-public class WaterBaloon extends AbstractWeapon {
+public class WaterBalloon extends AbstractWeapon {
 
 	
 	String color;

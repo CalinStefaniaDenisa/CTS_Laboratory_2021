@@ -18,14 +18,13 @@ public class TestFactory {
 		if(kidsMode) {
 			soldier = new Soldier("Bucky Barnes", new WaterPistol());
 		} else {
-			soldier = new Soldier("Buky Barnes", WeaponsFactory.getWeapon(WeaponType.PISTOL, ""));
+			soldier = new Soldier("Bucky Barnes", WeaponsFactory.getWeapon(WeaponType.PISTOL, ""));
 		}
 		
-		// with factory method
-		
-		AbstractFactory weaponFactory = 
-				(kidsMode == true) ? new WaterWeaponsFactory() : new RealWeaponsFactory();
-		soldier = new Soldier("Bucky Barnes", weaponFactory.getWeapon(WeaponType.PISTOL, soldier.setWeapon(weaponFactory.getWeapon(WeaponType.BAZOOKA, ""));
+		// with Factory method
+		AbstractFactory weaponFactory = (kidsMode == true) ? new WaterWeaponsFactory() : new RealWeaponsFactory();
+		soldier = new Soldier("Bucky Barnes", weaponFactory.getWeapon(WeaponType.PISTOL, "")); 
+		soldier.setWeapon(weaponFactory.getWeapon(WeaponType.BAZOOKA, ""));
 	}
 
 }
