@@ -8,12 +8,20 @@ import ro.ase.csie.cts.assignment.exception.InvalidLoanValueException;
 public class Account {
 
 	private double loanValue, interestRate;
-	private int daysActive;
 	private AccountType accountType;
-	public static final float BROKER_FEE = 0.0125f;
+	private int daysActive;
+	private static final double BROKER_FEE = 0.0125;
+	private static final double INITIAL_FEE = 0.0;
 	
+	public Account(double loanValue, double rate, AccountType accountType, int daysActive) throws InvalidLoanValueException {
+		this.setLoanValue(loanValue);
+		this.interestRate = rate;
+		this.accountType = accountType;
+		this.daysActive = daysActive;
+	}
+
 	public double getLoanValue() {
-		return loanValue;
+		return this.loanValue;
 	}
 	
 	public double getInterestRate() {
@@ -21,11 +29,11 @@ public class Account {
 	}
 	
 	public int getDaysActive() {
-		return daysActive;
+		return this.daysActive;
 	}
 	
 	public void setLoanValue(double loanValue) throws InvalidLoanValueException {
-		if(loanValue < 0) {			
+		if(loanValue <= 0) {
 			throw new InvalidLoanValueException();
 		} else {
 			this.loanValue = loanValue;
@@ -45,47 +53,31 @@ public class Account {
 		return this.loanValue * this.interestRate;
 	}
 	
-	private static int getNumOfDaysInCurrentYear() {
+	private int getNumOfDaysInCurrentYear() {
 		Calendar cal = Calendar.getInstance();
         cal.setTime(new Date());
-        int numOfDays = cal.getActualMaximum(Calendar.DAY_OF_YEAR);
 
-        return numOfDays;
+        return cal.getActualMaximum(Calendar.DAY_OF_YEAR);
 	}
 
-	private static float getNumberOfCompoundingPeriods(Account account) {
-		int numOfDays = getNumOfDaysInCurrentYear();
-
-		return account.daysActive / numOfDays;
+	private float getNumberOfCompoundingPeriods() {
+		return this.daysActive / this.getNumOfDaysInCurrentYear();
 	}
 	
-	public static double getCompoundInterestValue(Account account) {
-		float noOfCompoundingPeriods = getNumberOfCompoundingPeriods(account);
-		double compoundInterestValue = account.loanValue * (Math.pow( 1 + account.interestRate, noOfCompoundingPeriods) - 1);
-
-		return compoundInterestValue;
+	public double getCompoundInterestValue() {
+		return this.loanValue * (Math.pow( 1 + this.interestRate, this.getNumberOfCompoundingPeriods()) - 1);
 	}
 
-	public static double calculateTotalFee(Account account) {
-		double totalFee = 0.0;
-
-		if(account.accountType == AccountType.PREMIUM || account.accountType == AccountType.SUPER_PREMIUM) {
-			totalFee = BROKER_FEE * getCompoundInterestValue(account);
-		}
-
-		return totalFee;
+	public double calculateTotalFee() {
+		return (this.accountType == AccountType.PREMIUM || this.accountType == AccountType.SUPER_PREMIUM) 
+					? BROKER_FEE * this.getCompoundInterestValue() 
+					: INITIAL_FEE;
 	}
 
-	public Account(double loanValue, double rate, AccountType accountType, int daysActive) throws InvalidLoanValueException {
-		setLoanValue(loanValue);
-		this.interestRate = rate;
-		this.accountType = accountType;
-		this.daysActive = daysActive;
-	}
-	
+	@Override
 	public String toString() {
-		return "Loan: " + this.loanValue + "; rate: " + this.interestRate + "; days active:" + daysActive + "; Type: " + accountType + ";";
+		return "Account [loanValue=" + loanValue + ", interestRate=" + interestRate + ", daysActive=" + daysActive
+				+ ", accountType=" + accountType + "]";
 	}
-	
 	
 }

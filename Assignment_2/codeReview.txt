@@ -1,44 +1,72 @@
 Code Review 
 
+
 Code formatting
+
 	- code is not formatted properly - too many spaces or none at all
+	
 	- code should fit in one screen
+	
 	- misplaced comments -  //	1.25% broker's fee
+	
 	- useless comments
+	
 	- sections of code without proper indentation
 
+
+
 Naming conventions
+
 	- naming conventions not respected (lowerCamelCase) - loan_value, account_Type, to_string()
+	
 	- meaningless variables names - temp, value, vb
 		- rename variable temp to daysInYear
 		- rename variable value to loanValue
+		
 	- meaningless function names - loan(), setValue(), calculate()
 		- rename function loan() to getLoanValue()
 		- rename setValue() to setLoanValue()
 
+
+
 Implementation
+
 	- remove hard-coded value - broker's fee, number of days in a year
+	
 	- group similar values under an enumeration 
 		- create AccountType enum
+		
 	- visibility type not specified for getLoan()
 		-specify public visibility
+		
 	- declared but unused functions and variables - Y.A.G.N.I.
 		- delete print() function
 		- delete temp variable
-	- there are setters and getters for public variables
-		- make variables private
+		
+	- incapsulation not respected - variables should be private
+	
 	- thrown exceptions aren't custom
 		- throw custom exception for invalid loan value
+		
 	- code is not self explanatory
-	- the function calculate() should do a single thing - S.R.P.
+	
+	- calculate() function shouldn't be static 
+	
+	- S.R.P. not respected in the function calculate()
 		- create new functions:
 			- to calculate the compound interest value
 			- to calculate the number of compounding periods
 			- to calculate the number of days in the current year
+			
+	- S.R.P. not respected in class
+		- calculate() for only one account, not for an array of accounts
+		
 	- D.R.Y. principle not respected in constructor
 		- use setLoanValue() function
+		
 	- argument missing from constructor - daysActive
-	- S.R.P. not respected in class
-		- calculateTotalFee() for only one account, not for an array of accounts
+	
 	- excessive use of useless logs
+	
+	- to_string() method doesn't override correctly
 	

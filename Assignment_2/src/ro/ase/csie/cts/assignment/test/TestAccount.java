@@ -12,10 +12,10 @@ public class TestAccount {
 		account1.getLoanValue();
 		account1.getInterestRate();
 		System.out.println(account1.getYearlyInterestValue());
-		System.out.println(Account.getCompoundInterestValue(account1));
+		System.out.println(account1.getCompoundInterestValue());
 		System.out.println(account1.toString());
 		
-		System.out.println(Account.calculateTotalFee(account1));
+		System.out.println(account1.calculateTotalFee());
 
 	}
 
