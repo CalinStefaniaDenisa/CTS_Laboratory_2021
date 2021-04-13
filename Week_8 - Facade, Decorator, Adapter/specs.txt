@@ -11,12 +11,15 @@ Keywords:
 	- external library
 
 
+DECORATOR
 
-
-2. Changing the characteristics of some superheroes during the game
+2. Changing the characteristics of some superheroes during the game / at run-time
 - During the game superheroes can be equipped with new equipment
 - The superhero's behavior can change dynamically depending on the interaction with the other characters in the game
 
+Keywords:
+	- some objects
+	- during the game
 
 
 FACADE
