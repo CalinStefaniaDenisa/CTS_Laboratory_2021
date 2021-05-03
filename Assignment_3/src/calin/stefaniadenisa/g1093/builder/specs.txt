@@ -1,0 +1,20 @@
+Title of the bachelor topic: 
+	Mood-driven travel web application
+
+
+Description of the problem to be solved by BUILDER pattern:
+
+	Instantiation of the travel destination associated with the country
+	- there are many attributes to allow its customization
+	- name, isExotic, stars, meanOfTransport, etc.
+	- an efficient solution must be found that allows the creation of the travel destinations without giving values for all the attributes but also without allowing the programmers to omit some of them
+
+
+Advantages for the solution:
+	- it lets the developer vary a travel destination's internal representation
+	- finer control over the construction process
+
+
+Disadvantages:
+	- more code 
+	- more complexity

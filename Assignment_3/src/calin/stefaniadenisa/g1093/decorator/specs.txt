@@ -1,0 +1,18 @@
+Title of the bachelor topic: 
+	Mood-driven travel web application
+
+
+Description of the problem to be solved by DECORATOR pattern:
+	Changing the characteristics of some vacation idea at run-time
+	- During a user's searching depending on the number of ratings provided, some vacation ideas have extra discounts or are free
+	- The details can change dynamically depending on the user's interaction with the website
+		
+
+Advantages for the solution:
+	- expansion of function of classes without inheritance
+	- resource-optimized functionalities
+
+
+Disadvantages:
+	- high number of objects
+	- difficult debugging process

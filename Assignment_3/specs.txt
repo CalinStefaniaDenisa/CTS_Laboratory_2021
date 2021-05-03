@@ -1,0 +1,26 @@
+Assignment 3 - Creational and Structural design patterns
+
+Based on your bachelor paper topic define scenarios that justify the implementation of some creative and structural design patterns:
+
+
+     Singleton
+     Factory (Simple or Method)
+     Builder
+     Prototype
+     Decorator
+     Adapter
+     Proxy
+     Flyweight
+     Composite (optional)
+
+Each pattern is implemented in its own subpackage according to the seminar approach. The subpackage also contains a text file with:
+- the title of the bachelor topic
+- description of the problem to be solved by pattern
+- advantages for the solution (2-3 bullets)
+- disadvantages (2-3 bullets)
+
+All patterns are tested in a TestAssignment.java class in the root package.
+
+The parent package in which you work has the name name.surname.gNrGroup
+
+The solution is loaded in the form of a .zip file that contains the root of the main package (the directory in src/)

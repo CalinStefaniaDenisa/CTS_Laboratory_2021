@@ -1,0 +1,21 @@
+Title of the bachelor topic: 
+	Mood-driven travel web application
+
+
+Description of the problem to be solved by FLYWEIGHT pattern:
+	To efficiently manage (from a memory point of view) scenarios in which tourists choose multiple destinations for the same trip find a solution based on:
+	- the collection of destinations contains elements of the same kind (the same 3D models)
+	- the space occupied by a 3D model is significant
+	- generating such a scenario requires a significant memory space for the client
+	- 3D models are displayed on the screen at different coordinates and can have textures of different colors
+	- an efficient solution must be found regarding the management of these situations
+	
+
+Advantages for the solution:
+	- space savings
+	- improved data caching for higher response time
+
+
+Disadvantages:
+	- may introduce run-time costs associated with transferring, finding and computing extrinsic state
+	- shared objects may be not eligible for garbage collection

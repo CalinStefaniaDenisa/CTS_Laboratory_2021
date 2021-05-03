@@ -1,0 +1,18 @@
+Title of the bachelor topic: 
+	Mood-driven travel web application
+
+
+Description of the problem to be solved by SIMPLE FACTORY pattern:
+	Create different destination types in the application
+		- currently there are 3 types of destinations BEACH_VACATION, CRUISE, CAMPING_VACATION.
+		- there is a risk that in the future new types will appear or the existing ones will change
+		
+
+Advantages for the solution:
+	- the code only deals with the product interfaces; therefore, it can work with any user-defined concrete product classes
+	- connects the class hierarchies with minimum coupling
+
+
+Disadvantages:
+	- clients might have to sub-class the creator class just to create a particular concrete product object
+	- the factory used for creating the objects is bound with the client code

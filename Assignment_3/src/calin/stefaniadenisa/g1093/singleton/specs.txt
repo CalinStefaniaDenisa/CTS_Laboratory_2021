@@ -1,0 +1,21 @@
+Title of the bachelor topic: 
+	Mood-driven travel web application
+
+
+Description of the problem to be solved by SINGLETON pattern:
+
+	In order to create an online application (with travel ideas), I need to create a software solution that will provide efficient management of the connection to the Database / logger
+	- the different modules must use or link an unique connection to the database
+	- programmer implementing those modules cannot build multiple objects associated with the database connection
+	- the client must use an unique object to take care of the connection to the database
+
+
+Advantages for the solution:
+	- controlled access to sole instance
+	- reduces name space
+	- more flexible than class operations
+
+
+Disadvantages:
+	- unit testing is hard
+	- it prohibits the creation of new instances by hiding its constructor(s), so nobody can call the constructor directly

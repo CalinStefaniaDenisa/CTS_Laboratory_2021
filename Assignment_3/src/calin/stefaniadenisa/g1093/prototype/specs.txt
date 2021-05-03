@@ -1,0 +1,19 @@
+Title of the bachelor topic: 
+	Mood-driven travel web application
+
+
+Description of the problem to be solved by PROTOTYPE pattern:
+	
+	All destinations have virtual tours available.
+	- instances of the same destination can appear in the application
+	- creating the 3D model is an expensive process because it involves loading and generating the model
+	- an efficient solution must be found to create several instances of the same destination
+	
+
+Advantages for the solution:
+	- instead of creating new instances, i may create the instances with the appropriate state beforehand and then clone them whenever i want
+	- high flexibility - i may add or remove prototypes at run-time
+
+Disadvantages:
+	- the process could get complex when there are many classes
+	- it's difficult to clone classes that have circular references

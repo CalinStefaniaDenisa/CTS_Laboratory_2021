@@ -1,0 +1,18 @@
+Title of the bachelor topic: 
+	Mood-driven travel web application
+
+
+Description of the problem to be solved by ADAPTER pattern:
+
+	To develop an online application (with travel ideas) implement a software solution that allows the use of an external library that contains Romantic travel destinations, for the honeymoon.
+	Currently the game contains its own destinations that are part of the ACME framework
+
+	
+	Advantages for the solution:
+	- helps achieve reusability and flexibility
+	- client class is not complicated by having to use a different interface and can use polymorphism to swap between different implementations of adapters
+
+
+Disadvantages:
+	- adapters aren't transparent to clients
+	- sometimes many adaptations are required along an adapter chain to reach the type which is required
