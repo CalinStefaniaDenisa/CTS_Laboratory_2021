@@ -3,6 +3,7 @@ package ro.ase.cts.g1094.dp.chain;
 public class TestChain {
 
 	public static void main(String[] args) {
+		
 		 ChatHandler languageFilter = new LanguageFilter("English");
 		 ChatHandler privateChat = new PrivateChat();
 		 ChatHandler globalChat = new GlobalChat();
@@ -15,8 +16,7 @@ public class TestChain {
 		 chatServer.processMessage(new Message("@everyone", "Kill Superman! It's a bot.", 10));
 		 chatServer.processMessage(new Message("@John", "Let's start level 2.", 0));
 		 chatServer.processMessage(new Message("@everyone", "Let's join the party.", 0));
-
-
+		 
 
 	}
 

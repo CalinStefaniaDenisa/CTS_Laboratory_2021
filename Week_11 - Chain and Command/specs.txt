@@ -9,7 +9,7 @@ Keywords:
 	- 
 
 
-
+COMMAND
 
 2. The game client must perform tasks in the background without interfering with the development of the game (without blocking or slowing it down)
 - customer data backup

@@ -4,6 +4,7 @@ public class Message {
 	String text;
 	String destination;
 	int priority;
+	
 	public Message(String text, String destination, int priority) {
 		super();
 		this.text = text;
